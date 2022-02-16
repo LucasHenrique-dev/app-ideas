@@ -1,0 +1,80 @@
+header {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 20vh;
+
+    font-size: 1.5em;
+
+    color: #FFFBFC;
+    background-color: #1990CC;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+
+    color: #FFFBFC;
+    background-color: #1F201D;
+}
+
+.conversor {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.75em;
+}
+
+.entrada {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 1em;
+}
+
+.input-visor {
+    padding: 0.5em;
+
+    border-radius: 5px;
+    border: none;
+
+    outline: none;
+}
+
+.saida {
+    margin-left: 1em;
+}
+
+.saida input {
+    cursor: default;
+}
+
+.btn-converter {
+    margin-top: 4em;
+
+    padding: 1em;
+
+    border-radius: 5px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 1em;
+
+    cursor: pointer;
+
+    color: #FFFBFC;
+    background-color: #70B77E;
+}

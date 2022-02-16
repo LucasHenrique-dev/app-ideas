@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <link rel="shortcut icon" href="assets/images/Martz90-Circle-Calculator.ico" type="image/x-icon">
+
+    <title>Conversor Binário-Decimal</title>
+</head>
+<body>
+    <header>
+        Conversor Binário-Decimal
+    </header>
+
+    <main>
+        <p>Entre com um número Binário na caixa abaixo:</p>
+        <div class="conversor">
+            <div class="entrada">
+                <input class="input-visor" type="text" placeholder="Insira o número binário" data-input-binario>
+            </div>
+            <p class="seta">&DoubleLongLeftRightArrow;</p>
+            <div class="saida">
+                <input class="input-visor" type="text" readonly data-input-decimal>
+            </div>
+        </div>
+        <input class="btn-converter" type="button" value="CONVERTER" data-converter-button>
+    </main>
+
+</body>
+<script src="scripts/converter.js"></script>
+</html>
