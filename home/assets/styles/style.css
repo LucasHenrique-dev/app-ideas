@@ -1,0 +1,42 @@
+header {
+    display: flex;
+
+    height: 20vh;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2em;
+
+    color: #EEE5E9;
+    background-color: #161314;
+}
+
+.link {
+    text-decoration: none;
+    
+    color: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    height: calc(80vh - 2em);
+
+    align-items: center;
+
+    padding-top: 2em;
+    
+    font-size: 1.5em;
+
+    color: #F7F3F5;
+    background-color: #707070;
+}
+
+.projetos__lista {
+    display: grid;
+
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 20vw 20vw 20vw 20vw;
+}
