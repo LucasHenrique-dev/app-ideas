@@ -22,4 +22,4 @@ O objetivo da aplicação é servir como um conversor de número binário para d
 
 Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](www.google.com.br)
 
-[⬆ Voltar ao topo](#computer-bin2dec)<br>
+[⬆ Voltar ao topo](#-bin2dec)
