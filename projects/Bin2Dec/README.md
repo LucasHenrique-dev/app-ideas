@@ -8,7 +8,7 @@
 
 O objetivo da aplicação é servir como um conversor de número binário para decimal.
 
-<img src="../home/assets/images/bin2dec.png" alt="imagem do site Bin2Dec">
+<img src="../../home/assets/images/bin2dec.png" alt="imagem do site Bin2Dec">
 
 > O site conta com sistema de validação para números binários inteiros, feito por meio de JavaScript.
 
@@ -20,6 +20,6 @@ O objetivo da aplicação é servir como um conversor de número binário para d
 
 ## ☕ Usando O Jogo da Forca
 
-Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](www.google.com.br)
+Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](https://lucashenrique-dev.github.io/app-ideas/Bin2Dec/index.html)
 
 [⬆ Voltar ao topo](#-bin2dec)
