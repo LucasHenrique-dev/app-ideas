@@ -14,9 +14,9 @@ O objetivo da aplicação é servir como um conversor de número binário para d
 
 ## 🚀 Funcionalidades
 
-- [ x ] Conversão de um número binário de tamanho arbitrário
-- [ x ] Notificação quando o número inserido não representa um binário inteiro válido
-- [ x ] Visualização do número binário em seu decimal correspondente
+- [x] Conversão de um número binário de tamanho arbitrário
+- [x] Notificação quando o número inserido não representa um binário inteiro válido
+- [x] Visualização do número binário em seu decimal correspondente
 
 ## ☕ Usando O Jogo da Forca
 
