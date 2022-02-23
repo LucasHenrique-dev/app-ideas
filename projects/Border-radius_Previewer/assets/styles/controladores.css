@@ -1,0 +1,17 @@
+.controladores {
+    display: grid;
+
+    margin-top: 1em;
+
+    grid-template-areas:
+        "top"
+        "bottom";
+    grid-template-columns: 105px 105px;
+    grid-row: auto auto;
+
+    gap: 1em;
+}
+
+.controlador {
+    outline: none;
+}
