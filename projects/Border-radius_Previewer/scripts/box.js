@@ -1,6 +1,7 @@
 const border_radius_button = document.querySelector("[data-button-border_radius]")
-const controladores = document.querySelector("[data-div-controladores]")
+const div_controladores = document.querySelector("[data-div-controladores]")
+const controladores = div_controladores.children
 
 border_radius_button.addEventListener("click", () => {
-    console.log(controladores.children[0])
+    console.log(controladores[0])
 })

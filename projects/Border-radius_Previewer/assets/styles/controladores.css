@@ -13,5 +13,9 @@
 }
 
 .controlador {
+    border: none;
+    border-radius: 5px;
+
+    padding: 0.5em;
     outline: none;
 }
