@@ -1,8 +1,8 @@
 .conteudo__button {
     margin: 2em 0em 4em 0em;
-    padding: 1em;
+    padding: 1.5em;
 
-    border: none;
+    border: solid #12182B;
     border-radius: 5px;
 
     cursor: pointer;
