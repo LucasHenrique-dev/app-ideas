@@ -15,5 +15,15 @@
     border: none;
     border-radius: 50%;
 
-    transition: background-color 1s ease-out;
+    overflow: hidden;
+    background: linear-gradient(to right, #ffdd4a, #ff5e00 50%, #BEEF9E 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+
+    cursor: pointer;
+}
+
+.conteudo__button_avancado:hover {
+    background-position: 0 100%;
 }
