@@ -8,6 +8,13 @@
     cursor: pointer;
 }
 
+.conteudo_avancado {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    height: 200px;
+    width: 200px;
+}
+
 .conteudo__button_avancado {
     margin-top: 2em;
     padding: 1em;
@@ -26,4 +33,14 @@
 
 .conteudo__button_avancado:hover {
     background-position: 0 100%;
+}
+
+.conteudo__button_padrao {
+    margin-top: 2em;
+    padding: 1em;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
 }

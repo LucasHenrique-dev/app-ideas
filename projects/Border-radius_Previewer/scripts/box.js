@@ -6,6 +6,20 @@
     const box_style = border_radius_button.style
 
     for (const controlador of controladores) {
+        controlador.addEventListener("click", () => {
+            if (!controlador.value && controlador.id == "number_0") {
+                controlador.value = 5
+            } else if (!controlador.value && controlador.id == "number_1") {
+                controlador.value = 5
+            } else if (!controlador.value && controlador.id == "number_2") {
+                controlador.value = 5
+            } else if (!controlador.value && controlador.id == "number_3") {
+                controlador.value = 5
+            }
+        })
+    }
+
+    for (const controlador of controladores) {
         controlador.addEventListener("input", () => {
             if (controlador.id == "number_0") {
                 box_style.borderTopLeftRadius = `${controlador.value}px`

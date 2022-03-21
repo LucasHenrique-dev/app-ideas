@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/buttons.css">
+    <link rel="stylesheet" href="assets/styles/controladores.css">
+
+    <link rel="shortcut icon" href="assets/images/Graphics-Vibe-Developer-Css.ico" type="image/x-icon">
+
+    <title>Border-radius Previewer</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">
+            <a href="index.html" class="link">BORDER-RADIUS PREVIEWER</a>
+        </h1>
+    </header>
+
+    <main class="conteudo">
+        <p>Clique no botão abaixo para copiar o estilo:</p>
+        <input type="button" value="CSS BORDER-RADIUS" class="conteudo__button conteudo_avancado" data-button-border_radius>
+        <p>Controle os valores das bordas:</p>
+        <div class="controladores controladores_avancados" data-div-controladores>
+            <input type="number" min="0" id="number_0" placeholder="top-left-horizontal" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_1" placeholder="top-left-vertical" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_2" placeholder="top-right-horizontal" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_3" placeholder="top-right-vertical" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_4" placeholder="bottom-left-horizontal" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_5" placeholder="bottom-left-vertical" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_6" placeholder="bottom-right-horizontal" class="controlador controlador_avancado">
+            <input type="number" min="0" id="number_7" placeholder="bottom-right-vertical" class="controlador controlador_avancado">
+        </div>
+        <p>Voltar aos controladores básicos</p>
+        <input type="button" value="MODO PADRÃO" class="conteudo__button_padrao" onclick="history.back()">
+    </main>
+
+</body>
+
+<script src="scripts/box_avancado.js"></script>
+</html>

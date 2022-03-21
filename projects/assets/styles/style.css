@@ -5,7 +5,7 @@ body {
         "cabecalho"
         "conteudo";
     grid-template-columns: auto;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 20vh auto;
 }
 
 .cabecalho {
