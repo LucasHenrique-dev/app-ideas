@@ -10,7 +10,7 @@ O objetivo da aplicação é proporcionar a visualização das mudanças aplicad
 
 <img src="../../home/assets/images/border-radius_previewer.jpg" alt="imagem do site Border-Radius Previewer">
 
-> O site conta com sistema de validação para números binários inteiros, feito por meio de JavaScript.
+> Visualização da página inicial do site, havendo ainda a possibilidade de visualizar a versão "avançada" da aplicação ao clicar no botão.
 
 ## 🚀 Funcionalidades
 
