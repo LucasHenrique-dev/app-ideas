@@ -18,7 +18,7 @@ O objetivo da aplicação é servir como um conversor de número binário para d
 - [x] Notificação quando o número inserido não representa um binário inteiro válido
 - [x] Visualização do número binário em seu decimal correspondente
 
-## ☕ Usando O Jogo da Forca
+## ☕ Usando O APP
 
 Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](https://lucashenrique-dev.github.io/app-ideas/projects/Bin2Dec/index.html)
 

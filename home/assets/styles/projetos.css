@@ -11,13 +11,19 @@
     gap: .5em;
 }
 
-.projetos__lista___item:nth-child(1) {
+.projetos__lista .link:nth-child(1) {
+    background: url("../images/bin2dec.png") center / cover no-repeat;
+}
+
+.projetos__lista .link:nth-child(2) {
+    background: url("../images/border-radius_previewer.jpg") center / cover no-repeat;
+}
+
+.projetos__lista___item {
     display: flex;
     flex-grow: 1;
 
     align-items: flex-end;
-
-    background: url("../images/bin2dec.png") center / cover no-repeat;
 }
 
 .projetos__titulo {

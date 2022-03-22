@@ -8,6 +8,7 @@ Acesse a página contendo a lista de projetos: [APP IDEAS](https://lucashenrique
 Nome | Descrição | Dificuldade
 |---|---|---
 [Bin2Dec](projects/Bin2Dec) | Conversor de Binário para Decimal | Iniciante
+[Border Radius Previewer](projects/Border-radius_Previewer) | Visualizador de Border Radius | Iniciante
 
 ## 💡 Inspriração
 Projeto inspirado no trabalho de [Florin Pop](https://github.com/florinpop17)
