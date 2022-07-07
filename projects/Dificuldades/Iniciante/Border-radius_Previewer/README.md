@@ -20,6 +20,6 @@ O objetivo da aplicação é proporcionar a visualização das mudanças aplicad
 
 ## ☕ Usando O APP
 
-Para usar o Border-radius Previewer basta acessar o seguinte site: [Border Radius Previewer](https://lucashenrique-dev.github.io/app-ideas/projects/Border-radius_Previewer/index.html)
+Para usar o Border-radius Previewer basta acessar o seguinte site: [Border Radius Previewer](https://lucashenrique-dev.github.io/app-ideas/projects/Dificuldades/Iniciante/Border-radius_Previewer/index.html)
 
 [⬆ Voltar ao topo](#-border-radius-previewer)

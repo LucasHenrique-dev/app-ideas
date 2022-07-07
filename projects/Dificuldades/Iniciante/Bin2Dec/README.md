@@ -20,6 +20,6 @@ O objetivo da aplicação é servir como um conversor de número binário para d
 
 ## ☕ Usando O APP
 
-Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](https://lucashenrique-dev.github.io/app-ideas/projects/Bin2Dec/index.html)
+Para usar o Bin2Dec basta acessar o seguinte site: [Bin2Dec](https://lucashenrique-dev.github.io/app-ideas/projects/Dificuldades/Iniciante/Bin2Dec/index.html)
 
 [⬆ Voltar ao topo](#-bin2dec)
