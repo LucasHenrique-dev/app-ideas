@@ -8,7 +8,7 @@
 
 O objetivo da aplicação é proporcionar a visualização das mudanças aplicadas pelo estilo border-radius em um botão.
 
-<img src="../../home/assets/images/border-radius_previewer.jpg" alt="imagem do site Border-Radius Previewer">
+<img src="../../../../home/assets/images/border-radius_previewer.jpg" alt="imagem do site Border-Radius Previewer">
 
 > Visualização da página inicial do site, havendo ainda a possibilidade de visualizar a versão "avançada" da aplicação ao clicar no botão.
 

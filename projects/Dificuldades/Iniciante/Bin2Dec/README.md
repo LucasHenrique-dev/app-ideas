@@ -8,7 +8,7 @@
 
 O objetivo da aplicação é servir como um conversor de número binário para decimal.
 
-<img src="../../home/assets/images/bin2dec.png" alt="imagem do site Bin2Dec">
+<img src="../../../../home/assets/images/bin2dec.png" alt="imagem do site Bin2Dec">
 
 > O site conta com sistema de validação para números binários inteiros, feito por meio de JavaScript.
 
