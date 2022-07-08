@@ -1,0 +1,105 @@
+.conteudo__div__roda_sorte {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo__roda_sorte {
+    display: flex;
+    border: 5px solid #E4F3E2;
+    border-radius: 50%;
+    
+    padding: 26vh;
+
+    background: conic-gradient(red 90deg, blue 90deg 180deg, orange 180deg 270deg, black 270deg);
+
+    /* -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite; */
+}
+
+.conteudo__girar {
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite; 
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+.conteudo__roda_sorte_centro {
+    border: none;
+    border-radius: 50%;
+
+    position: absolute;
+
+    background-color: #E4F3E2;
+    padding: 2em;
+}
+
+.conteudo__div_nomes {
+    position: absolute;
+}
+
+.span1 {
+    position: absolute;
+
+    transform: translate(-6rem, -5rem) rotate(225deg);
+}
+
+.span2 {
+    position: absolute;
+
+    transform: translate(2rem, -5rem) rotate(-45deg);
+}
+
+.span3 {
+    position: absolute;
+
+    transform: translate(-6rem, 5rem) rotate(-225deg);
+}
+
+.span4 {
+    position: absolute;
+
+    transform: translate(2rem, 5rem) rotate(45deg);
+}
+
+.conteudo__div__opcoes {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+
+    margin-left: 5em;
+}
+
+.conteudo__nomes {
+    height: 25em;
+    width: 20em;
+
+    border: none;
+
+    padding: 1em;
+}
+
+.conteudo__roda_sorte_botao {
+    border: none;
+    border-radius: 0.5em;
+
+    padding: 1em;
+}
