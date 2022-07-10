@@ -10,8 +10,8 @@
 
 .conteudo__roda_sorte {
     display: flex;
-    border: 5px solid #E4F3E2;
     border-radius: 50%;
+    border: none;
 
     height: 85%;
 
@@ -54,15 +54,20 @@
 
 .conteudo__div_nomes {
     position: absolute;
+
+    overflow: hidden;
+
+    border: 5px solid #E4F3E2;
+    border-radius: 50%;
 }
 
-.span__font {
+.span__name {
     position: absolute;
 
     font-size: 100%;
 }
 
-.span1 {
+/* .span1 {
     transform: translate(5rem, 6rem) rotate(225deg);
 }
 
@@ -76,7 +81,7 @@
 
 .span4 {
     transform: translate(14rem, 16rem) rotate(45deg);
-}
+} */
 
 .conteudo__div__opcoes {
     display: flex;
