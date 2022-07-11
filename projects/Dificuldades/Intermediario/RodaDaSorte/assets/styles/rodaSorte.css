@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.svg_text {
+    text-anchor: middle;
+    font: 12px Calibri, Arial;
+}
+
 .conteudo__roda_sorte {
     display: flex;
     border-radius: 50%;
