@@ -14,6 +14,8 @@
     const cores = ["#8ECAE6", "#219EBC", "#023047", "#FFB703", "#FB8500"];
 
     
+    apresentarRoleta();
+    
     btn_atualizar.addEventListener("mouseover", () => {
         const nomes = extrairNomes(info)
 
@@ -25,6 +27,14 @@
         } else svg_style.border = "0";
     })
 
+    function apresentarRoleta() {
+        const nomes = extrairNomes(info)
+
+        svg_roleta.innerHTML = "";
+
+        montarRoleta(nomes);
+        ajustarSVG(360/nomes.length, div_heigth, div_width);
+    }
 
     function extrairNomes(data) {
         const info = data.value.split("\n")
@@ -38,8 +48,8 @@
     }
 
     function montarRoleta(nomes) {
-        const raio = extrairValores(svg_roleta.getAttribute("viewBox"));
-        const sessoes = criarSessoes(nomes, raio);
+        const raio = extrairValores(svg_roleta.getAttribute("viewBox")), raio_centro = raio*0.25;;
+        const sessoes = criarSessoes(nomes, raio, raio_centro);
         const divisoes = sessoes.length/2;
 
         for (const sessao of sessoes) {
@@ -49,6 +59,8 @@
         if (divisoes != 1 && (divisoes-1)%cores.length == 0) {
             svg_roleta.innerHTML += `<path d=" M60,60 h ${raio} v 0.3 h -${raio} v 0 " fill="gray"/>`;
         }
+
+        criarBotaoCentral(raio, raio_centro);
     }
 
     function extrairValores(info) {
@@ -59,16 +71,17 @@
     }
 
     //centro: (60, 60); raio: 50%
-    function criarSessoes(nomes, raio) {
+    function criarSessoes(nomes, raio_base, raio_centro) {
         const path_info = [], textos = [];
         const intervalo = Math.ceil(360/nomes.length);
+        const raio = raio_base + raio_centro;
         let cores = [];
 
         for (let angulo = 0; angulo < 360; angulo+=intervalo) {
             const ini_radiano = angulo*Math.PI/180, fim_radiano = (angulo+intervalo)*Math.PI/180;
 
-            path_info.push(calcularPath(nomes.length, raio, raio, ini_radiano, fim_radiano));
-            textos.push(textPosition(nomes[angulo/intervalo], raio/2, raio, ini_radiano, fim_radiano));
+            path_info.push(calcularPath(nomes.length, raio_base, raio_base, ini_radiano, fim_radiano));
+            textos.push(textPosition(nomes[angulo/intervalo], raio/2, raio_base, ini_radiano, fim_radiano));
         }
 
         if (nomes.length <= 1) cores = path_info;
@@ -90,7 +103,7 @@
         const x = raio*Math.cos((ini_radiano+fim_radiano)/2) + centro;
         const y = raio*Math.sin((ini_radiano+fim_radiano)/2) + centro;
 
-        return `<text x='${x}' y='${y}' class='svg_text' data-text-svg>${nome}</text>`;
+        return `<text x='${x}' y='${y}' class='svg_text section_text' data-text-svg>${nome}</text>`;
     }
 
     function montarSessoes(paths, textos) {
@@ -114,15 +127,17 @@
         return paths;
     }
 
+    function criarBotaoCentral(raio, raio_centro) {
+        svg_roleta.innerHTML += `<circle cx="${raio}" cy="${raio}" r="${raio_centro}" stroke="black" fill="#E4F3E2"/>`;
+    }
+
     function ajustarSVG(angulo, div_heigth, div_width) {
-        criarBorda(div_heigth, div_width);
+        ajustarTamanho(div_heigth, div_width);
         ajustarAnguloTexto(angulo);
     }
 
-    function criarBorda(div_heigth, div_width) {
-        svg_roleta.setAttribute("height", `${Math.min(div_heigth, div_width)*0.9}`);
-        svg_style.borderRadius = "50%";
-        svg_style.border = "1rem solid black";
+    function ajustarTamanho(div_heigth, div_width) {
+        svg_roleta.setAttribute("height", `${Math.min(div_heigth, div_width)*0.75}`);
     }
 
     function ajustarAnguloTexto(angulo_divisao) {
@@ -130,7 +145,7 @@
         const ini_angulo = angulo_divisao/2;
 
         for (const [index, nome] of Array.from(nomes).entries()) {
-            if (index%2 == 0) continue;
+            if (index%2 == 0 || nome.classList.contains("middle_text")) continue;
             
             const aux = (index-1)/2;
             const angulo = ini_angulo+(aux*angulo_divisao);
@@ -139,6 +154,5 @@
 
             nome.setAttribute("transform", `rotate(${angulo}, ${x}, ${y})`);
         }
-
     }
 })()

@@ -10,27 +10,14 @@
 
 .svg_text {
     text-anchor: middle;
+    dominant-baseline: central;
     font: 12px Calibri, Arial;
 }
 
-.conteudo__roda_sorte {
-    display: flex;
-    border-radius: 50%;
-    border: none;
-
-    height: 85%;
-
-    background: conic-gradient(red 90deg, blue 90deg 180deg, orange 180deg 270deg, black 270deg);
-
-    /* -webkit-animation:spin 8s linear infinite;
-    -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite; */
-}
-
 .conteudo__girar {
-    /* -webkit-animation:spin 8s linear infinite;
+    -webkit-animation:spin 8s linear infinite;
     -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite;  */
+    animation:spin 8s linear infinite; 
 }
 
 @-moz-keyframes spin { 
@@ -45,48 +32,6 @@
         transform:rotate(360deg); 
     } 
 }
-
-.conteudo__roda_sorte_centro {
-    border: none;
-    border-radius: 50%;
-
-    font-size: 100%;
-
-    position: absolute;
-
-    background-color: #E4F3E2;
-}
-
-.conteudo__div_nomes {
-    position: absolute;
-
-    overflow: hidden;
-
-    border: 5px solid #E4F3E2;
-    border-radius: 50%;
-}
-
-.span__name {
-    position: absolute;
-
-    font-size: 100%;
-}
-
-/* .span1 {
-    transform: translate(5rem, 6rem) rotate(225deg);
-}
-
-.span2 {
-    transform: translate(14rem, 6rem) rotate(-45deg);
-}
-
-.span3 {
-    transform: translate(5rem, 16rem) rotate(-225deg);
-}
-
-.span4 {
-    transform: translate(14rem, 16rem) rotate(45deg);
-} */
 
 .conteudo__div__opcoes {
     display: flex;
@@ -113,4 +58,11 @@
     border-radius: 0.5em;
 
     padding: 1em;
+}
+
+.text_center {
+    position: absolute;
+    color: black;
+
+    font-size: 1em;
 }
