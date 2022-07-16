@@ -12,9 +12,13 @@
     text-anchor: middle;
     dominant-baseline: central;
     font: 12px Calibri, Arial;
+
+    user-select: none;
 }
 
 .conteudo__girar {
+    cursor: default;
+
     -webkit-animation:spin 8s linear infinite;
     -moz-animation:spin 8s linear infinite;
     animation:spin 8s linear infinite; 
@@ -65,4 +69,7 @@
     color: black;
 
     font-size: 1em;
+
+    cursor: default;
+    user-select: none;
 }
