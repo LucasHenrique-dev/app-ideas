@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.conteudo__div__roda_sorte::after {
+    content: url(../images/right-arrow.png);
+    transform: scaleX(-1);
+}
+
 .svg_text {
     text-anchor: middle;
     dominant-baseline: central;
@@ -18,23 +23,6 @@
 
 .conteudo__girar {
     cursor: default;
-
-    -webkit-animation:spin 8s linear infinite;
-    -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite; 
-}
-
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
 }
 
 .conteudo__div__opcoes {
@@ -62,14 +50,4 @@
     border-radius: 0.5em;
 
     padding: 1em;
-}
-
-.text_center {
-    position: absolute;
-    color: black;
-
-    font-size: 1em;
-
-    cursor: default;
-    user-select: none;
 }

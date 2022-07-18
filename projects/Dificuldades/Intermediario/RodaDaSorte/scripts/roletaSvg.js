@@ -128,7 +128,7 @@
     }
 
     function criarBotaoCentral(raio, raio_centro) {
-        svg_roleta.innerHTML += `<circle cx="${raio}" cy="${raio}" r="${raio_centro}" stroke="black" fill="#E4F3E2"/>`;
+        svg_roleta.innerHTML += `<circle cx="${raio}" cy="${raio}" r="${raio_centro}" fill="#E4F3E2"/>`;
     }
 
     function ajustarSVG(angulo, div_heigth, div_width) {
@@ -156,3 +156,33 @@
         }
     }
 })()
+//ERRO: 
+// Alex
+// Lucas
+// Maria
+// Roberta
+// Janaina
+// João
+// Pedro
+// Carlos
+// Henrique
+// Tenório
+// Breno
+
+// ERRO2:
+// Lucas
+// Maria
+// Roberta
+// Janaina
+// João
+// Pedro
+// Carlos
+// Henrique
+// Tenório
+// Breno
+// Ugo
+// // Lucas
+// d
+// d
+// d
+// d
