@@ -13,14 +13,13 @@
 
     const cores = ["#8ECAE6", "#219EBC", "#023047", "#FFB703", "#FB8500"];
 
-    
     apresentarRoleta();
     
-    btn_atualizar.addEventListener("mouseover", () => {
+    btn_atualizar.addEventListener("click", () => {
         const nomes = extrairNomes(info)
 
         svg_roleta.innerHTML = "";
-
+        
         if (nomes.length > 0) {
             montarRoleta(nomes);
             ajustarSVG(360/nomes.length, div_heigth, div_width);
@@ -39,7 +38,11 @@
     function extrairNomes(data) {
         const info = data.value.split("\n")
         const info_tratados = info.reduce((acc, curr) => {
-            if (curr.trim().length > 0) acc.push(curr.trim());
+            const info_line = curr.trim();
+            if (info_line.length > 0) {
+                if (info_line.length > 10) acc.push(info_line.substring(0, 10)+"...");
+                else acc.push(info_line);
+            }
     
             return acc;
         }, []);
@@ -145,7 +148,7 @@
         const ini_angulo = angulo_divisao/2;
 
         for (const [index, nome] of Array.from(nomes).entries()) {
-            if (index%2 == 0 || nome.classList.contains("middle_text")) continue;
+            if (index%2 == 0 || !nome.classList.contains("svg_text")) continue;
             
             const aux = (index-1)/2;
             const angulo = ini_angulo+(aux*angulo_divisao);
@@ -156,33 +159,3 @@
         }
     }
 })()
-//ERRO: 
-// Alex
-// Lucas
-// Maria
-// Roberta
-// Janaina
-// João
-// Pedro
-// Carlos
-// Henrique
-// Tenório
-// Breno
-
-// ERRO2:
-// Lucas
-// Maria
-// Roberta
-// Janaina
-// João
-// Pedro
-// Carlos
-// Henrique
-// Tenório
-// Breno
-// Ugo
-// // Lucas
-// d
-// d
-// d
-// d

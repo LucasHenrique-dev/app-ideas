@@ -3,27 +3,42 @@
     const div_nomes = document.querySelector("[data-div-opcoes]");
 
     const btn_atualizar = div_nomes.children[1];
+    const name_area = div_nomes.children[0];
 
     let divisoes = (roleta.children.length-1)/2;
 
     const time = 8;
 
 
-    btn_atualizar.addEventListener("mouseover", () => {
-        divisoes = (roleta.children.length-1)/2;
+    btn_atualizar.addEventListener("click", () => {
+        divisoes = Math.floor((roleta.children.length-1)/2);
     })
 
     roleta.addEventListener("click", () => {
-
-        sortear();
+        const names = extrairNomes(name_area);
+        sortear(names);
     });
 
 
-    function sortear() {
+    function extrairNomes(data) {
+        const info = data.value.split("\n")
+        const info_tratados = info.reduce((acc, curr) => {
+            const info_line = curr.trim();
+            if (info_line.length > 0) {
+                acc.push(info_line);
+            }
+    
+            return acc;
+        }, []);
+    
+        return info_tratados;
+    }
+
+    function sortear(names) {
         console.log(divisoes);
         const angulo = girar();
         setTimeout(() => {
-            anunciarVencedor(angulo);
+            anunciarVencedor(angulo, names);
         }, time*1000);
     }
 
@@ -44,14 +59,13 @@
         return delta*360;
     }
 
-    function anunciarVencedor(angulo) {
+    function anunciarVencedor(angulo, names) {
         const intervalos = calcularIntervalos();
         const angulo_equivalente = Math.floor(angulo%360);
         const sorteado = binarySearch(0, intervalos.length, intervalos, angulo_equivalente);
         const arr_ajuste = divisoes - (sorteado+1);
-        const arr_sorteado = (2*arr_ajuste)+1;
 
-        window.alert(`Resultado: ${roleta.children[arr_sorteado].innerHTML}!`)
+        window.alert(`Resultado: ${names[arr_ajuste]}!`);
     }
 
     function calcularIntervalos() {
