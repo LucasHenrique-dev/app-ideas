@@ -5,18 +5,14 @@
     const btn_atualizar = div_nomes.children[1];
     const name_area = div_nomes.children[0];
 
-    let divisoes = (roleta.children.length-1)/2;
-
     const time = 8;
 
 
-    btn_atualizar.addEventListener("click", () => {
-        divisoes = Math.floor((roleta.children.length-1)/2);
-    })
-
     roleta.addEventListener("click", () => {
         const names = extrairNomes(name_area);
+
         sortear(names);
+        aguardarResultado();
     });
 
 
@@ -35,7 +31,6 @@
     }
 
     function sortear(names) {
-        console.log(divisoes);
         const angulo = girar();
         setTimeout(() => {
             anunciarVencedor(angulo, names);
@@ -60,18 +55,18 @@
     }
 
     function anunciarVencedor(angulo, names) {
-        const intervalos = calcularIntervalos();
-        const angulo_equivalente = Math.floor(angulo%360);
+        const intervalos = calcularIntervalos(names.length);
+        const angulo_equivalente = angulo%360;
         const sorteado = binarySearch(0, intervalos.length, intervalos, angulo_equivalente);
-        const arr_ajuste = divisoes - (sorteado+1);
+        const arr_ajuste = names.length - (sorteado+1);
 
         window.alert(`Resultado: ${names[arr_ajuste]}!`);
     }
 
-    function calcularIntervalos() {
+    function calcularIntervalos(divisoes) {
         const intervalos = [];
         for (let i = 0; i < divisoes; i++) {
-            intervalos[i] = Math.ceil(360/divisoes)*(i+1);
+            intervalos[i] = 360/divisoes*(i+1);
         }
 
         return intervalos;
@@ -85,23 +80,17 @@
         if (array[index] > target) return binarySearch(inicio, index, array, target);
         else return binarySearch(index+1, fim, array, target);
     }
+
+    function aguardarResultado() {
+        btn_atualizar.style.pointerEvents = "none";
+        name_area.style.pointerEvents = "none";
+        roleta.style.pointerEvents = "none";
+
+        setTimeout(() => {
+            btn_atualizar.style.pointerEvents = "all";
+            name_area.style.pointerEvents = "all";
+            roleta.style.pointerEvents = "all";
+        }, time*1000);
+    }
 })()
 
-// BUG:
-// 1
-// 2
-// 3
-// 4
-// 5
-// 6
-// 7
-// 8
-// 9
-// 10
-// 11
-// 12
-// 13
-// 14
-// 15
-// 16
-// 17

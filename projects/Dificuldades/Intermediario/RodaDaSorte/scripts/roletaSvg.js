@@ -76,15 +76,15 @@
     //centro: (60, 60); raio: 50%
     function criarSessoes(nomes, raio_base, raio_centro) {
         const path_info = [], textos = [];
-        const intervalo = Math.ceil(360/nomes.length);
+        const intervalo = 360/nomes.length;
         const raio = raio_base + raio_centro;
         let cores = [];
 
-        for (let angulo = 0; angulo < 360; angulo+=intervalo) {
+        for (let angulo = 0; Math.round(angulo) < 360; angulo+=intervalo) {
             const ini_radiano = angulo*Math.PI/180, fim_radiano = (angulo+intervalo)*Math.PI/180;
-
+            
             path_info.push(calcularPath(nomes.length, raio_base, raio_base, ini_radiano, fim_radiano));
-            textos.push(textPosition(nomes[angulo/intervalo], raio/2, raio_base, ini_radiano, fim_radiano));
+            textos.push(textPosition(nomes[Math.round(angulo/intervalo)], raio/2, raio_base, ini_radiano, fim_radiano));
         }
 
         if (nomes.length <= 1) cores = path_info;
