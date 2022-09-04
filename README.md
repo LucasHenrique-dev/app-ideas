@@ -9,6 +9,7 @@ Nome | Descrição | Dificuldade
 |---|---|---
 [Bin2Dec](projects/Dificuldades/Iniciante/Bin2Dec) | Conversor de Binário para Decimal | Iniciante
 [Border Radius Previewer](projects/Dificuldades/Iniciante/Border-radius_Previewer) | Visualizador de Border Radius | Iniciante
+[Roda Da Sorte](projects/Dificuldades/Intermediario/RodaDaSorte) | Roleta/Roda da Sorte | Intermediário
 
 ## 💡 Inspriração
 Projeto inspirado no trabalho de [Florin Pop](https://github.com/florinpop17)
