@@ -19,6 +19,10 @@
     background: url("../images/border-radius_previewer.jpg") center / cover no-repeat;
 }
 
+.projetos__lista .link:nth-child(3) {
+    background: url("../images/roda-sorte.jpg") center / cover no-repeat;
+}
+
 .projetos__lista___item {
     display: flex;
     flex-grow: 1;
