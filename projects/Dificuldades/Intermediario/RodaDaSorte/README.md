@@ -16,6 +16,7 @@ O objetivo da aplicação é criar um jogo de "Roda/Roleta da sorte" em que o us
 
 - [x] Aceita uma quantidade razoável de opções para a roleta (número de opções muito elevadas dificultam a visualização das mesmas dentro da roleta)
 - [x] Botão para atualização da roleta
+- [x] Texto das opções não transbordam a roleta (são abreviado com "...")
 - [x] Sistema aguarda uma jogada terminar para poder começar uma nova
 - [x] Distrubuição alternada de cores para cada opção
 - [x] Visualização da opção sorteada (seta e notificação do site)
